@@ -5,20 +5,38 @@
   <title>UDBHAV - ISTE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" />
-  
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/linkstyles.css" />
   
   <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
   <script type='text/javascript' src='js/jquery.particleground.js'></script>
   <script type='text/javascript' src='js/demo.js'></script>
+  
+  <style> /* Firefox seems to have issues loading the clip path from inside the CSS */
+    .link--urpi::before {
+      -webkit-clip-path: url(#cp_up); 
+      clip-path: url(#cp_up);
+    }
+
+    .link--urpi::after {
+      -webkit-clip-path: url(#cp_down); 
+      clip-path: url(#cp_down);
+    }
+  </style>
+
 </head>
 
 <body>
 <div id="particles">
 <div id="intro">
-    <h1>Particleground</h1>
-    <p>A JavaScript plugin for snazzy background particle systems</p>
-    <a href="#" class="btn">Download</a>
-  </div>
+<div class="grid">
+  <a class="link link--kukuri" href="#" data-letters="Kukuri">Kukuri</a></br>
+  <a class="link link--surinami" href="#"><span data-letters-l="Suri" data-letters-r="nami">Surinami</span></a></br>
+  <a class="link link--yaku" href="#"> <span>Y</span><span>a</span><span>k</span><span>u</span> </a></br>
+  <a class="link link--ilin" href="#"><span>Il</span><span>in</span></a></br>
+</div>
+ </div>
 </div>
 </body>
 </html>
